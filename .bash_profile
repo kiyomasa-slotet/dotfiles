@@ -7,6 +7,8 @@ PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
 
 ## EXPORT
 export PATH=/usr/local/bin:$PATH
+export LC_CTYPE=ja_JP.UTF-8
+export LANG=ja_JP.UTF-8
 
 ## Hide machine name
 PS1="\W $"
