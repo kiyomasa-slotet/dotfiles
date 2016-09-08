@@ -22,7 +22,8 @@ alias ga='git add -p'
 alias gd='git diff'
 alias gb='git branch'
 alias gs='git status'
-alias gpp='git push origin master'
+
+alias gpp='git push origin master'  ## wow
 
 ## Change Dir
 alias c.='cd ../'
