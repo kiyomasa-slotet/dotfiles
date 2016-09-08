@@ -1,8 +1,17 @@
+syntax on
 set number
-set title
-
+set nowrap
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set autoindent
+set showmatch
+set backup
+set backupdir=~/.vim/backup
+set autoread
+set encoding=utf-8
 set ignorecase
 set wrapscan
-syntax on
-
-
+set ttyfast
+set ambiwidth=double
+set ruler
