@@ -7,14 +7,14 @@ PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
 
 ## EXPORT
 export PATH=/usr/local/bin:$PATH
-export LC_CTYPE=ja_JP.UTF-8
-export LANG=ja_JP.UTF-8
+export LC_CTYPE=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 ## Hide machine name
 PS1="\W $"
 
 ## vim aliases
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+alias vi='env LANG=en_US.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 ## Git Commands
 alias gl='git log --graph --decorate --oneline'
