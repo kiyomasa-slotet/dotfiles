@@ -16,6 +16,7 @@ set wrapscan
 set ttyfast
 set ambiwidth=double
 set ruler
+set clipboard=unnamed
 
 imap { {}<LEFT>
 imap [ []<LEFT>
