@@ -13,8 +13,11 @@ export LANG=en_US.UTF-8
 ## Hide machine name
 PS1="\W $"
 
-## vim aliases
+## vim aliase
 alias vi='env LANG=en_US.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+
+## w3m bookmarks
+alias w3mhn='w3m https://news.ycombinator.com/'
 
 ## Git Commands
 alias gl='git log --graph --decorate --oneline'
