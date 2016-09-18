@@ -1,6 +1,6 @@
-## nvm (node version manager)
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+## nodenv
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
 
 ## variables
 PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
@@ -17,7 +17,7 @@ PS1="\W $"
 alias vi='env LANG=en_US.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
 
 ## w3m bookmarks
-alias w3mhn='w3m https://news.ycombinator.com/'
+alias w3mhn='w3m https://news.ycombinator.com/'  ## like a teenager
 
 ## Git Commands
 alias gl='git log --graph --decorate --oneline'
