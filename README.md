@@ -1,2 +1,2 @@
 ## dot files
-Kiyomasa Sato
+author: Kiyomasa Sato
