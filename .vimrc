@@ -1,4 +1,7 @@
-syntax on
+" THEME
+syntax enable
+" TODO: set colorscheme
+
 set number
 set nowrap
 set tabstop=2
@@ -18,6 +21,8 @@ set ambiwidth=double
 set ruler
 set clipboard=unnamed
 
+" auto insert '}' and ']'
+" I prefer write ')' by myself
 imap { {}<LEFT>
 imap [ []<LEFT>
 
