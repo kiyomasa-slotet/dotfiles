@@ -53,6 +53,7 @@ call dein#add('Shougo/neosnippet')
 
 call dein#add('digitaltoad/vim-pug')
 call dein#add('othree/html5.vim')
+call dein#add('posva/vim-vue')
 
 call dein#end()
 

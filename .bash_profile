@@ -28,7 +28,8 @@ alias gd='git diff'
 alias gb='git branch'
 alias gs='git status'
 
-alias gpom='git push origin master'  ## wow
+alias gpom='git push origin master'   ## wow
+alias gpog='git push origin gh-pages' ## omg
 
 ## Change Dir
 alias c.='cd ../'
