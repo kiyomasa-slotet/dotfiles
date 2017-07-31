@@ -3,6 +3,7 @@ syntax enable
 " TODO: set colorscheme
 
 set number
+set wrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
