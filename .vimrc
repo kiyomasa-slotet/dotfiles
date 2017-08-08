@@ -1,6 +1,4 @@
-" THEME
 syntax enable
-" TODO: set colorscheme
 
 set number
 set wrap
@@ -33,28 +31,3 @@ if has("autocmd")
   \   exe "normal! g'\"" |
   \ endif
 endif
-
-" -------------------
-"    dein.vim
-" -------------------
-if &compatible
-  set nocompatible
-endif
-set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim
-
-call dein#begin(expand('~/.vim/dein'))
-
-call dein#add('Shougo/dein.vim')
-call dein#add('Shougo/vimproc.vim', {'build': 'make'})
-
-call dein#add('Shougo/neocomplete.vim')
-call dein#add('Shougo/neomru.vim')
-call dein#add('Shougo/neosnippet')
-
-call dein#add('digitaltoad/vim-pug')
-call dein#add('othree/html5.vim')
-call dein#add('posva/vim-vue')
-
-call dein#end()
-
-filetype plugin indent on
