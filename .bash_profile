@@ -28,8 +28,8 @@ alias gl='git log --graph --decorate --oneline'
 alias gd='git diff'
 alias gb='git branch'
 alias gs='git status'
-alias gpom='git push origin master'
-alias gpog='git push origin gh-pages'
+alias gm='git push origin master'
+alias gg='git push origin gh-pages'
 
 ## Change Dir
 alias c.='cd ../'
