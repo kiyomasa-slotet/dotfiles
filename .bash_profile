@@ -31,6 +31,9 @@ alias gs='git status'
 alias gm='git push origin master'
 alias gg='git push origin gh-pages'
 
+## Custam commands
+alias cl='clear'
+
 ## Change Dir
 alias c.='cd ../'
 alias c..='cd ../../'
