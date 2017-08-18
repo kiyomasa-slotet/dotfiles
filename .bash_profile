@@ -1,9 +1,5 @@
 #.bash_profile
 
-## nodenv
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-
 ## variables
 PATH="/Applications/MacVim.app/Contents/MacOS:$PATH"
 
@@ -17,6 +13,11 @@ export PYENV ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+## nodenv
+## TODO: remove node.js from machine
+export PATH="$HOME/.nodenv/bin:$PATH"
+eval "$(nodenv init -)"
+
 ## Hide machine name
 PS1="\W $"
 
@@ -28,6 +29,7 @@ alias gl='git log --graph --decorate --oneline'
 alias gd='git diff'
 alias gb='git branch'
 alias gs='git status'
+alias ga='git add .'
 alias gm='git push origin master'
 alias gg='git push origin gh-pages'
 
