@@ -13,11 +13,6 @@ export PYENV ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-## nodenv
-## TODO: remove node.js from machine
-export PATH="$HOME/.nodenv/bin:$PATH"
-eval "$(nodenv init -)"
-
 ## Hide machine name
 PS1="\W $"
 
@@ -34,14 +29,12 @@ alias ga='git add .'
 alias gm='git push origin master'
 alias gg='git push origin gh-pages'
 
-## Custam commands
+## custam commands
 alias cl='clear'
+alias lsa='ls -a'
 
 ## ffmpeg
 alias temp='ffmpeg -ss 00:00:00.000 -i Untitled.mov -pix_fmt rgb8 -r 12 -vf scale=480:-1 output.gif'
-
-
-
 
 ## Change Dir
 alias c.='cd ../'
