@@ -22,7 +22,8 @@ eval "$(nodenv init -)"
 PS1="\W $"
 
 ## w3m bookmark
-alias w3mhn='w3m https://news.ycombinator.com/'
+alias whn='w3m https://news.ycombinator.com/'
+alias wimg='w3m http://img.2chan.net/b/futaba.htm'
 
 ## Git Commands
 alias gl='git log --graph --decorate --oneline'
@@ -35,6 +36,12 @@ alias gg='git push origin gh-pages'
 
 ## Custam commands
 alias cl='clear'
+
+## ffmpeg
+alias temp='ffmpeg -ss 00:00:00.000 -i Untitled.mov -pix_fmt rgb8 -r 12 -vf scale=480:-1 output.gif'
+
+
+
 
 ## Change Dir
 alias c.='cd ../'
