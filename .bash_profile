@@ -40,3 +40,12 @@ alias temp='ffmpeg -ss 00:00:00.000 -i Untitled.mov -pix_fmt rgb8 -r 12 -vf scal
 alias c.='cd ../'
 alias c..='cd ../../'
 alias c...='cd ../../../'
+
+## convert .MOV to .gif
+function Anime() {
+  ffmpeg -i Untitled.mov -pix_fmt rgb24 -r 12 -vf scale=500:-1 output.gif
+  convert -layers Optimize output.gif output_optimized.gif
+  rm Untitled.mov output.gif
+}
+## 寝る　
+## TODO: convert設定弄りとメイキングドラマとかその辺の調整
