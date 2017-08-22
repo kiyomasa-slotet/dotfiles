@@ -21,11 +21,12 @@ alias whn='w3m https://news.ycombinator.com/'
 alias wimg='w3m http://img.2chan.net/b/futaba.htm'
 
 ## Git Commands
+alias ga='git add .'
+alias gc='git commit -m '
 alias gl='git log --graph --decorate --oneline'
 alias gd='git diff'
 alias gb='git branch'
 alias gs='git status'
-alias ga='git add .'
 alias gm='git push origin master'
 alias gg='git push origin gh-pages'
 
