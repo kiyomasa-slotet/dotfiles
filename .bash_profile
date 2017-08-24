@@ -10,8 +10,14 @@ export LANG=en_US.UTF-8
 
 ## .bashrc
 if [ -f /etc/bashrc ]; then
+  . ~/dotfiles/.bashrc
+fi
+
+## aliases
+if [ -f .bash_aliases ]; then
   . ~/dotfiles/.bash_aliases
 fi
+
 
 ## pyenv
 export PYENV ROOT="$HOME/.pyenv"
@@ -33,7 +39,7 @@ convertSetting_2="2"
 convertSetting_3="3"
 convertSetting_3="4"
 
-function MovToGif() {
+function Anime() {
   case $1 in
     "$convertSetting_0" ) ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 6 -vf scale=120:-1 output0.gif;
       convert -layers Optimize output0.gif output_opt0.gif;;
@@ -50,15 +56,3 @@ function MovToGif() {
 }
 
 ## ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 6 -vf scale=480:-1 output0.gif convert -contrast -layers Optimize output0.gif output_opt0.gif
-
-function Test() {
-  echo $1
-  if [ $1 = 1 ]; then
-  echo "same"
-  else
-  echo "null"
-  fi
-}
-
-## 寝る　
-## TODO: convert設定弄りとメイキングドラマとかその辺の調整
