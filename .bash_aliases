@@ -1,3 +1,5 @@
+# ~/.bash_aliases
+
 # w3m bookmark
 alias w3mhn='w3m https://news.ycombinator.com/'
 alias w3mimg='w3m http://img.2chan.net/b/futaba.htm'
