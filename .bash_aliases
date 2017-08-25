@@ -12,7 +12,13 @@ alias gd='git diff'
 alias gb='git branch'
 alias gs='git status'
 alias gm='git push origin master'
-alias gg='git push origin gh-pages'
+
+function gg() {
+  git add .;
+  git commit -m 'hoge';
+  git push origin master;
+  echo "wp"
+}
 
 # custam commands
 alias cl='clear'

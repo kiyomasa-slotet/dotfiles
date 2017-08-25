@@ -41,13 +41,4 @@ function Anime() {
 
 
 
-
-
-
-
-
-
-
-
-
 ## ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 6 -vf scale=480:-1 output0.gif convert -contrast -layers Optimize output0.gif output_opt0.gif
