@@ -1,5 +1,12 @@
 # ~/.bashrc
 
+## aliases
+if [ -f .bash_aliases ]; then
+  . ~/dotfiles/.bash_aliases
+fi
+
+
+
 #-------------------------------------------------------------
 # convert mp4 to mp3
 #-------------------------------------------------------------
@@ -19,7 +26,7 @@ function Anime() {
   case $1 in
     "$convertSetting_0" ) ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 6 -vf scale=120:-1 output0.gif;
       convert -layers Optimize output0.gif output_opt0.gif;;
-    "$convertSetting_1" ) ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 8 -vf scale=240:-1 output1.gif;
+    "$convertSetting_1" ) ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 9 -vf scale=500:-1 output1.gif;
       convert -layers Optimize output1.gif output_opt1.gif;;
     "$convertSetting_2" ) ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 12 -vf scale=400:-1 output2.gif;
       convert -layers Optimize output2.gif output_opt2.gif;;
@@ -30,5 +37,17 @@ function Anime() {
   esac
   echo "done"
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## ffmpeg -i Untitled.mov -pix_fmt rgb8 -r 6 -vf scale=480:-1 output0.gif convert -contrast -layers Optimize output0.gif output_opt0.gif

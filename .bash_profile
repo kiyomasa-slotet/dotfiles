@@ -15,3 +15,8 @@ eval "$(pyenv init -)"
 
 ## Hide machine name
 PS1="\W $"
+
+## .bashrc
+if [ -f /etc/bashrc ]; then
+  . ~/dotfiles/.bashrc
+fi
