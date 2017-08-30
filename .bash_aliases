@@ -14,7 +14,7 @@ alias gs='git status'
 alias gm='git push origin master'
 
 function gg() {
-  cd git/kiyomasasato.com;
+  cd $HOME/git/kiyomasasato.com;
   git add .;
   git commit -m 'hoge';
   git push origin master;
