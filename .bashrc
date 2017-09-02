@@ -19,7 +19,6 @@ alias mp4tomp3="find . -type f -name "*.mp4" -print0 | perl -pe 's/\.mp4\0/\0/g'
 # 400:225
 # 320:180
 #-------------------------------------------------------------
-
 convertSetting_0="0"
 convertSetting_1="1"
 convertSetting_2="2"
@@ -56,4 +55,11 @@ function Anime() {
   esac
   rm cut.mov palette.png;
   echo "done"
+}
+
+#-------------------------------------------------------------
+# deleate .DS_Store
+#-------------------------------------------------------------
+function deleateDsStore(){
+   find $1 \( -name '.DS_Store' -o -name 'Thumbs.db' \) -delete -print;
 }
