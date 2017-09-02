@@ -7,6 +7,7 @@ alias w3mimg='w3m http://img.2chan.net/b/futaba.htm'
 # Git Commands
 alias ga='git add .'
 alias gc='git commit -m '
+alias gcc="git commit -m 'hoge'"
 alias gl='git log --graph --decorate --oneline'
 alias gd='git diff'
 alias gb='git branch'
