@@ -19,41 +19,24 @@ alias mp4tomp3="find . -type f -name "*.mp4" -print0 | perl -pe 's/\.mp4\0/\0/g'
 # 400:225
 # 320:180
 #-------------------------------------------------------------
-convertSetting_0="0"
-convertSetting_1="1"
-convertSetting_2="2"
-convertSetting_3="3"
-convertSetting_4="4"
-convertSetting_5="5"
-convertSetting_6="6"
+convertSetting_0="0" # 16 FPS 400*220 px
+convertSetting_1="1" # 12 FPS 480*270 px
+convertSetting_2="2" #  9 FPS 480*270 px
+convertSetting_3="3" # 12 FPS 400*300 px (イデオン用)
 
 function Anime() {
   cd $HOME/Desktop;
   rm *.gif;
   case $1 in
-    "$convertSetting_0" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=16,scale=640:360 cut.mov;
-      ffmpeg -i cut.mov -vf palettegen palette.png;
-      ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out0.gif;;
-    "$convertSetting_1" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=640:360 cut.mov;
-      ffmpeg -i cut.mov -vf palettegen palette.png;
-      ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out1.gif;;
-    "$convertSetting_2" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=480:270 cut.mov;
-      ffmpeg -i cut.mov -vf palettegen palette.png;
-      ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out2.gif;;
-    "$convertSetting_3" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=320:180 cut.mov;
-      ffmpeg -i cut.mov -vf palettegen palette.png;
-      ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out3.gif;;
-    "$convertSetting_4" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=6,scale=320:180 cut.mov;
-      ffmpeg -i cut.mov -vf palettegen palette.png;
-      ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out4.gif;;
-    "$convertSetting_5" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=24,scale=320:180 cut.mov;
-      ffmpeg -i cut.mov -vf palettegen palette.png;
-      ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out5.gif;;
-    "$convertSetting_6" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=400:300 cut.mov;
-      ffmpeg -i cut.mov -vf palettegen palette.png;
-      ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out6.gif;;
+    "$convertSetting_0" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=16,scale=400:220 cut.mov;;
+    "$convertSetting_1" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=480:270 cut.mov;;
+    "$convertSetting_2" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=9,scale=480:270 cut.mov;;
+    "$convertSetting_3" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=400:300 cut.mov;;
   esac
+  ffmpeg -i cut.mov -vf palettegen palette.png;
+  ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out.gif;
   rm cut.mov palette.png;
+  open -a 'Brave' out.gif;
   echo "done"
 }
 
