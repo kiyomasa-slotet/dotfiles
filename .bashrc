@@ -25,7 +25,6 @@ convertSetting_2="2"
 convertSetting_2="3"
 convertSetting_3="4"
 
-
 # なんかおかしいので case 構文をチェックする
 function Anime() {
   cd $HOME/Desktop;
