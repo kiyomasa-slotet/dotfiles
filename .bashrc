@@ -30,11 +30,11 @@ function Anime() {
   cd $HOME/Desktop;
   rm *.gif;
   case $1 in
-    "$convertSetting_0" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=9,scale=500:500 cut.mov;;
-    "$convertSetting_1" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=506:278 cut.mov;;
-    "$convertSetting_2" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=300:278 cut.mov;;
-    "$convertSetting_3" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=9,scale=506:278 cut.mov;;
-    "$convertSetting_4" ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=400:300 cut.mov;;
+    $convertSetting_0 ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=24,scale=400:220 cut.mov;;
+    $convertSetting_1 ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=20,scale=320:180 cut.mov;;
+    $convertSetting_2 ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=300:278 cut.mov;;
+    $convertSetting_3 ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=9,scale=506:278 cut.mov;;
+    $convertSetting_4 ) ffmpeg -ss 00:00:00 -i Untitled.mov -vf fps=12,scale=400:300 cut.mov;;
   esac
   ffmpeg -i cut.mov -vf palettegen palette.png;
   ffmpeg -i cut.mov -i palette.png -filter_complex paletteuse out.gif;
