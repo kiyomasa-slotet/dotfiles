@@ -13,6 +13,9 @@ export PYENV ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+## nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 ## Hide machine name
 PS1="\W $"
 
@@ -20,3 +23,6 @@ PS1="\W $"
 if [ -f /etc/bashrc ]; then
   . ~/dotfiles/.bashrc
 fi
+
+## shell script
+export PATH=$PATH:/Users/kiyomasa/dotfiles/bin/sh
