@@ -30,3 +30,7 @@ alias la='ls -a'
 alias c.='cd ../'
 alias c..='cd ../../'
 alias c...='cd ../../../'
+
+# sh commands
+alias makeGif='sh makeGif.sh'
+alias pripara='sh convertPriparamp4.sh'
