@@ -13,6 +13,7 @@ alias gd='git diff'
 alias gb='git branch'
 alias gs='git status'
 alias gm='git push origin master'
+alias gpg='git push origin gh-pages'
 
 function gg() {
   cd $HOME/git/kiyomasasato.com;
