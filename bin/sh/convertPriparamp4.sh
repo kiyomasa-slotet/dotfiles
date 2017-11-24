@@ -1,37 +1,38 @@
 #!/bin/bash
 
 timestamp=$(date +%s)
-echo $timestamp
-
 cd $HOME/Desktop
-# ffmpeg -i input.mov -c:v libvpx -crf 10 -b:v 1M -c:a libvorbis -vf fps=30,scale=630:1120 $timestamp.webm
 
-ffmpeg -i Untitled.mp4 -vcodec libx264 -crf 30 -vf transpose=2,fps=30,scale=450:800 -acodec copy aaa2.mp4
+<< SETTINGS
+====================================================================================================
 
+-c:v libx264 : エンコーダー指定
+-b:v : ビットレート指定、2M ~ 15M
+-vf transpose=2,fps=30,scale=1080:1920 : transposeが回転
+-af volume=1.5 : デフォルトだと音量が低いので調整
+
+====================================================================================================
+SETTINGS
+
+ffmpeg -i *.mp4 -c:v libx264 -b:v 10M -vf transpose=2,fps=30,scale=1080:1920 -af volume=1.5 $timestamp.mp4
+
+echo "$timestamp"
+mv $timestamp.mp4 $HOME/Pictures
+cd $HOME/Desktop
+rm *.mp4
 echo "done"
+
 
 << COMMENTOUT
 ===========================
    mp4 encode options
 ===========================
 
--preset pracebo
+-preset slow
+-preset placebo
 
 サウンド無圧縮
 -acodec copy
-
-
-
-
-===========================
-    to mp4 scripts
-===========================
-
-** ほぼ無圧縮 **
-ffmpeg -i test2.mp4 -vcodec libx264 -vf "transpose=2" out5.mp4
-** それなりに圧縮 **
-ffmpeg -i Untitled.mp4 -vcodec libx264 -vf "transpose=2" out5.mp4
-
 
 ===========================
    ENCODE SETTING MEMO
@@ -41,28 +42,17 @@ SIZE:
  - 16:9
  - 450:800
  - 540:960
- - 1120:630
+ - 630:1120      70
+ - 720:1280      80
+ - 900:1600     100
+ - 1080:1920
    and more...
 
-SOUND:          NEED TO MORE SOUND VOLUME
-* encode
--acodec libopus -b:a 80k
--acodec libopus -b:a 128k
-
-* do not encode
--acodec copy
-
-
-
 ===========================
-         TODO
+   WebM ENCODE SETTINGS
 ===========================
+ffmpeg -i Untitled.mp4 -c:v libvpx-vp9 -b:v 5M -vf transpose=2,fps=30,scale=630:1120 -acodec libopus -threads 8 $timestamp.webm
 
- - make capture(random time?)
- - 何より先にindexページレイアウト作成だ、シンプルなもので構わない
-
-
-
-
+ffmpeg -i Untitled.mp4 -c:v libvpx-vp9 -b:v 5M -vf transpose=2,fps=30,scale=1080:1920 -acodec libopus -threads 4 $timestamp.webm
 
 COMMENTOUT
