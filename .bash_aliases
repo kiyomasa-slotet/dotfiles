@@ -35,3 +35,11 @@ alias c...='cd ../../../'
 # sh commands
 alias makeGif='sh makeGif.sh'
 alias pripara='sh convertPriparamp4.sh'
+alias primg='sh Primg.sh'
+
+pripost()
+{
+  rm $HOME/Desktop/pripara/post/.DS_Store
+  python $HOME/Desktop/pripara/pripost.py
+  echo "done"
+}
