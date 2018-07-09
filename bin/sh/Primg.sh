@@ -3,6 +3,8 @@
 timestamp=$(date +%s)
 
 mkdir $HOME/Desktop/pripara/$timestamp
+find $HOME/Desktop/ -name "*).png" -exec rm {} \;
+
 mv $HOME/Desktop/*.png $HOME/Desktop/pripara/$timestamp
 cd $HOME/Desktop/pripara/$timestamp
 
