@@ -10,4 +10,3 @@
 `chmod +x *.sh`  
 
 ## TODO:
- - ~~`bin/`にscript置く（今はとりあえず.bashrcに書き散らかしてるので）~~ done

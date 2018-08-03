@@ -26,6 +26,7 @@ function gg() {
 # custam commands
 alias cl='clear'
 alias la='ls -a'
+alias shs='ssh slotet'
 
 # move dir
 alias c.='cd ../'
@@ -36,6 +37,12 @@ alias c...='cd ../../../'
 alias makeGif='sh makeGif.sh'
 alias pripara='sh convertPriparamp4.sh'
 alias primg='sh Primg.sh'
+
+movToMp4()
+{
+  cd Desktop
+  ffmpeg -i Untitled.mov -vf fps=60 cut.mp4
+}
 
 pripost()
 {
