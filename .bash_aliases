@@ -40,7 +40,7 @@ alias primg='sh Primg.sh'
 
 movToMp4()
 {
-  cd Desktop
+  cd $HOME/Desktop
   ffmpeg -i Untitled.mov -vf fps=60 cut.mp4
 }
 
@@ -50,3 +50,33 @@ pripost()
   python $HOME/Desktop/pripara/pripost.py
   echo "done"
 }
+
+gifToMp4()
+{
+  read -p "enter gif file name: " filename
+  ffmpeg -i $filename -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" video.mp4
+}
+
+
+
+# convertYoutubeCapture()
+# {
+#   timestamp=$(date +%s)
+#
+#   find $HOME/Desktop/ -name "*).png" -exec rm {} \;
+#
+#   mkdir $HOME/images/resouces/LoM/$timestamp
+#   mv $HOME/Desktop/*.png $HOME/images/resouces/LoM/$timestamp
+#
+#   cd $HOME/images/resouces/LoM/$timestamp
+#
+#   IFS_bak=$IFS
+#   IFS=$'\n'
+#   for file in *.png
+#   do
+#     # 595 406
+#     #    1048 1498
+#       convert $file -crop 1498x1048+596+406 $file
+#   done
+#   IFS=$IFS_bak
+# }
