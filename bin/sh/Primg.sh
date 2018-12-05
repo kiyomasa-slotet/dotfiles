@@ -13,6 +13,6 @@ IFS_bak=$IFS
 IFS=$'\n'
 for file in *.png
 do
-    convert $file -crop 985x1750+8+48 $file
+    convert $file -crop 985x1750+2+48 $file
 done
 IFS=$IFS_bak

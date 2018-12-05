@@ -37,6 +37,7 @@ alias c...='cd ../../../'
 alias makeGif='sh makeGif.sh'
 alias pripara='sh convertPriparamp4.sh'
 alias primg='sh Primg.sh'
+alias bpg='sh publish_to_ghpages.sh'
 
 movToMp4()
 {
