@@ -39,6 +39,7 @@ alias pripara='sh convertPriparamp4.sh'
 alias primg='sh Primg.sh'
 alias bpg='sh publish_to_ghpages.sh'
 alias resize='sh resizejpg.sh'
+alias deploy='sh deploy.sh'
 
 movToMp4()
 {
