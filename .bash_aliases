@@ -15,14 +15,6 @@ alias gs='git status'
 alias gm='git push origin master'
 alias gpg='git push origin gh-pages'
 
-function gg() {
-  cd $HOME/git/kiyomasasato.com;
-  git add .;
-  git commit -m 'hoge';
-  git push origin master;
-  echo "wp"
-}
-
 # custam commands
 alias cl='clear'
 alias la='ls -a'
