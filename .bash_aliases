@@ -33,11 +33,9 @@ alias bpg='sh publish_to_ghpages.sh'
 alias resize='sh resizejpg.sh'
 alias deploy='sh deploy.sh'
 
-movToMp4()
-{
-  cd $HOME/Desktop
-  ffmpeg -i Untitled.mov -vf fps=60 cut.mp4
-}
+# hoge
+alias ccvm='python /Users/kiyomasa/git/python-scripts/post_vid_to_slack.py'
+
 
 pripost()
 {
