@@ -36,7 +36,6 @@ alias deploy='sh deploy.sh'
 # hoge
 alias ccvm='python /Users/kiyomasa/git/python-scripts/post_vid_to_slack.py'
 
-
 pripost()
 {
   rm $HOME/Desktop/pripara/post/.DS_Store
