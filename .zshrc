@@ -19,7 +19,7 @@ alias c...="cd ../../../"
 
 # sh commands
 alias deploy="sh deploy.sh"
-alias convertMOV="/usr/local/bin/convertMOVtoMP4.sh"
+alias MOVtoMP4="/usr/local/bin/convertMOVtoMP4.sh"
 
 # Git Commands
 alias ga="git add ."
