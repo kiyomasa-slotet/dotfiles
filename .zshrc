@@ -11,6 +11,7 @@ fi
 alias cl="clear"
 alias la='ls -a'
 alias ll='ls -lart'
+alias reload='source .zshrc'
 
 # move dir
 alias c.="cd ../"
