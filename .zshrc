@@ -7,6 +7,8 @@ if type brew &>/dev/null; then
     compinit
 fi
 
+USER_NAME=`logname`
+
 # custam commands
 alias cl="clear"
 alias la='ls -a'
@@ -18,9 +20,13 @@ alias c.="cd ../"
 alias c..="cd ../../"
 alias c...="cd ../../../"
 
+# -- move specific working dir
+alias cdf='cd /Users/$USER_NAME/games/FakePlasticTrees'
+
 # sh commands
 alias deploy="sh deploy.sh"
-alias MOVtoMP4="/usr/local/bin/convertMOVtoMP4.sh"
+alias MOVtoMP4="sh /Users/$USER_NAME/git/dotfiles/bin/sh/convertMOVtoMP4.sh"
+alias test="sh /Users/$USER_NAME/git/dotfiles/bin/sh/aaa.sh"
 
 # Git Commands
 alias ga="git add ."
