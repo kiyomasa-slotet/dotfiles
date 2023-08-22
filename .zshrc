@@ -7,6 +7,20 @@ if type brew &>/dev/null; then
     compinit
 fi
 
+##########################################
+# misc
+autoload -Uz colors
+colors
+
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+autoload -Uz compinit
+compinit
+
+setopt hist_ignore_all_dups
+##########################################
 USER_NAME=`logname`
 
 # custam commands
