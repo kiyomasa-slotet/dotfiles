@@ -12,7 +12,6 @@ strd='"'
 str3="${strd}${str}${strd}"
 str4="${str2}${str3}"
 
-
 echo $str4
 
 git add .
