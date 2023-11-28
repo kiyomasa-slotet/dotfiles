@@ -7,6 +7,10 @@ if type brew &>/dev/null; then
     compinit
 fi
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh"
+[ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm"
+
 ##########################################
 # misc
 autoload -Uz colors
@@ -38,9 +42,11 @@ alias c...="cd ../../../"
 alias cdf='cd /Users/$USER_NAME/games/FakePlasticTrees'
 
 # sh commands
-alias deploy="sh deploy.sh"
-alias MOVtoMP4="sh /Users/$USER_NAME/git/dotfiles/bin/sh/convertMOVtoMP4.sh"
-alias test="sh /Users/$USER_NAME/git/dotfiles/bin/sh/aaa.sh"
+alias deploy="sh /Users/$USER_NAME/git/dotfiles/bin/sh/deploy.sh"
+#alias MOVtoMP4="sh /Users/$USER_NAME/git/dotfiles/bin/sh/convertMOVtoMP4.sh"
+alias cvtMOVtoMP4="sh /Users/$USER_NAME/git/dotfiles/bin/sh/convert_mov_to_mp4.sh"
+
+# co
 
 # Git Commands
 alias ga="git add ."
