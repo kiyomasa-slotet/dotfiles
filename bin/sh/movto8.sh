@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # discordencode - encodes a video file to under 8MiB for Discord
 usage () {

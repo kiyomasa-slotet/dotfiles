@@ -1,6 +1,7 @@
-#!/bin/sh
-
-# discordencode - encodes a video file to under 8MiB for Discord
+#!/bin/bash
+#動画圧縮 mov to mp4
+#1が高画質
+#2が低画質
 
 if [ -z "$1" ]
 then

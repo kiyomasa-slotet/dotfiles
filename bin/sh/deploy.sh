@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 echo "Type git commit comment ..."
 read str
