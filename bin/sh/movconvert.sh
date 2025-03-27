@@ -13,7 +13,7 @@ if [ ! -f "$1" ]; then
     exit 2
 fi
 
-echo "Choose convert mode.\n 1: local - crf18, keep scale.\n 2: devlog - crf 24, reduce scale."
+echo "Choose convert mode.\n 1: local - crf18(High quality), keep scale.\n 2: devlog - crf 24(Low quality), reduce scale."
 
 read str
 
